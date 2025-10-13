@@ -1,0 +1,71 @@
+body {
+  background: #fff6f9;
+  padding: 50px;
+  font-family: "Comic Sans MS", "Poppins", sans-serif;
+  color: #4b3f49;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: #ff6fa9;
+  font-family: "Poppins", sans-serif;
+}
+
+p, ol {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+#mypic, #zombunnie {
+  width: 200px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(255, 111, 169, 0.3);
+}
+
+#introduction h2 {
+  font-style: italic;
+}
+
+#introduction p {
+  font-size: 120%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+ol {
+  text-align: left;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+  .image-row,
+  .navigation {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #mypic, #zombunnie {
+    width: 80%;
+    max-width: 250px;
+  }
+}
+
+
+
+
+

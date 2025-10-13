@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quincy Corner</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #ffe6f0;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      background: #ffb3c6;
+      padding: 30px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #fff;
+      margin: 0;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px 10px;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gallery img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    
+    .paw {
+      position: absolute;
+      width: 50px;
+      opacity: 0.2;
+      animation: float 10s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) translateX(0);
+      }
+
+      100% {
+        transform: translateY(-100vh) translateX(100px);
+      }
+    }
+
+    
+    footer {
+      background: #ffb3c6;
+      padding: 15px 0;
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>🐾 Quincy Corner 🐾</h1>
+  </header>
+
+  
+  <img src="../exercises/images/paw.png" class="paw" style="left: 10%; animation-duration: 12s;">
+  <img src="../exercises/images/paw.png" class="paw" style="left: 50%; animation-duration: 15s;">
+  <img src="../exercises/images/paw.png" class="paw" style="left: 80%; animation-duration: 10s;">
+
+  <section class="gallery">
+    
+    <img src="../exercises/images/cat1.jpg" alt="Cat 1">
+    <img src="../exercises/images/cat2.jpg" alt="Cat 2">
+    <img src="../exercises/images/cat3.jpg" alt="Cat 3">
+    <img src="../exercises/images/cat4.jpg" alt="Cat 4">
+  </section>
+
+  <footer>
+    Made with ❤️ for Quincy girl
+  </footer>
+</body>
+
+</html>
+
