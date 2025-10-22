@@ -1,0 +1,16 @@
+body {
+    background-color: #1e2f25; 
+    color: #e0e0d1; 
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#output {
+    background-color: #2e4636;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#output p {
+    margin: 5px 0;
+}
