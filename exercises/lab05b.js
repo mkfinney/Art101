@@ -1,21 +1,34 @@
-function changeEnvironment(mode) {
-    if (mode == "night") {
-        $("body").css("background-color", "darkblue");
-        $("body").css("color", "white");
-        $("#message").html("It’s nighttime. The stars are out 🌙");
-    } else if (mode == "day") {
+function changeMood(mood) {
+    if (mood == "happy") {
+        $("#character").html("😄");
+        $("#message").html("I am feeling happy!");
         $("body").css("background-color", "lightyellow");
-        $("body").css("color", "black");
-        $("#message").html("It’s daytime! The sun is shining ☀️");
-    } else {
-        $("#message").html("Hmm... I don't know this mode!");
+    } 
+    else if (mood == "angry") {
+        $("#character").html("😡");
+        $("#message").html("Grrrr");
+        $("body").css("background-color", "salmon");
+    } 
+    else if (mood == "sad") {
+        $("#character").html("😢");
+        $("#message").html("Waaaa");
+        $("body").css("background-color", "lightblue");
+    } 
+    else {
+        $("#character").html("😐");
+        $("#message").html("The character is neutral.");
+        $("body").css("background-color", "#f0f0f0");
     }
 }
 
-$("#day-button").click(function () {
-    changeEnvironment("day");
+$("#happy-button").click(function() {
+    changeMood("happy");
 });
 
-$("#night-button").click(function () {
-    changeEnvironment("night");
+$("#angry-button").click(function() {
+    changeMood("angry");
+});
+
+$("#sad-button").click(function() {
+    changeMood("sad");
 });

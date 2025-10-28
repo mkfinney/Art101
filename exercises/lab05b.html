@@ -4,20 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 5b - Environment</title>
+    <title>Character Mood Switcher</title>
     <link rel="stylesheet" href="lab05b.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="lab05b.js" defer></script>
 </head>
 
 <body>
-    <h1>Environment Switcher</h1>
-    <button id="day-button">Day Mode</button>
-    <button id="night-button">Night Mode</button>
+    <h1>Character Mood Switcher</h1>
+    <p>Click a button to change the character's mood:</p>
 
-    <div id="scene">
-        <p id="message">Click a button to change the environment!</p>
-    </div>
+    <div id="character">😐</div>
+    <p id="message">The character is neutral.</p>
+
+    <button id="happy-button">Happy</button>
+    <button id="angry-button">Angry</button>
+    <button id="sad-button">Sad</button>
 </body>
 
 </html>

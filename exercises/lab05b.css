@@ -1,13 +1,32 @@
 body {
     text-align: center;
     font-family: Arial, sans-serif;
-    background-color: lightblue;
-    color: black;
-    transition: background-color 1s, color 1s;
+    background-color: #f0f0f0;
+    transition: background-color 0.7s;
 }
 
-#scene {
-    margin-top: 30px;
-    padding: 20px;
-    border-radius: 20px;
+#character {
+    font-size: 80px;
+    margin: 30px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#happy-button {
+    background-color: lightgreen;
+}
+
+#angry-button {
+    background-color: lightcoral;
+}
+
+#sad-button {
+    background-color: lightblue;
 }
