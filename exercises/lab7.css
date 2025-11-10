@@ -1,0 +1,22 @@
+.nice-block {
+    height: 40px;
+    overflow: hidden;
+    width: 250px;
+    padding: 10px;
+    background: pink;
+    margin: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    transition: all 0.4s ease;
+}
+
+.more {
+    height: auto;
+    overflow: visible;
+}
+
+.nice-block span {
+    cursor: pointer;
+    color: darkviolet;
+    font-weight: bold;
+}
