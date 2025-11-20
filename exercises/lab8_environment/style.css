@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.creature {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  border-radius: 20px;
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#creature2 {
+  top: 150px;
+  left: 200px;
+  background-color: lightgreen;
+}
+
+#creature3 {
+  top: 150px;
+  left: 350px;
+  background-color: lightblue;
+}
