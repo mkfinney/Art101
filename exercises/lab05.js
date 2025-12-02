@@ -1,13 +1,16 @@
-function askNumber(whatNumber) {
-    let userNumber = prompt("Guess 1-10?");
+function askNumber(secretNumber) {
+    const userGuess = Number(prompt("Guess 1–10?"));
 
-    if (userNumber == whatNumber) {
-        $("#output").html("You got it!");
+    if (userGuess === secretNumber) {
+        $("#output").html("🎉 You got it!");
+    } else if (userGuess < secretNumber) {
+        $("#output").html("Too low! Try a higher number.");
+    } else if (userGuess > secretNumber) {
+        $("#output").html("Too high! Try a lower number.");
     } else {
-        $("#output").html("Noooooope");
+        $("#output").html("Please enter a valid number.");
     }
 }
 
-$("#good-button").click(function () {
-    askNumber(5);
-});
+$("#good-button").on("click", () => askNumber(5));
+

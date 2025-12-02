@@ -1,30 +1,59 @@
-// CLICK EVENT
-$("#creature").click(function() {
-  $("#status").text("You clicked me! 🐾");
-  $(this).css("background", "lavender");
-});
+$(document).ready(() => {
+  const $creature = $("#creature");
+  const $status = $("#status");
+  const $nameInput = $("#name-input");
+  const $renameBtn = $("#rename-btn");
 
-// HOVER EVENT
-$("#creature").hover(
-  function() { $("#status").text("You’re close... 👀"); },
-  function() { $("#status").text("You left me :("); }
-);
+  // CLICK EVENT
+  $creature.on("click", () => {
+    $status.text("You clicked me! 🐾");
+    $creature.css("background", "lavender");
+  });
 
-// DOUBLE CLICK EVENT
-$("#creature").dblclick(function() {
-  $("#status").text("You woke me up!! 😳");
-  $(this).css("transform", "scale(1.2)");
-});
+  // HOVER EVENT
+  $creature.hover(
+    () => $status.text("You’re close... 👀"),
+    () => $status.text("You left me :(")
+  );
 
-// KEYPRESS EVENT
-$(document).keydown(function(event) {
-  $("#status").text("You pressed: " + event.key);
-});
+  // DOUBLE CLICK EVENT
+  $creature.on("dblclick", () => {
+    $status.text("You woke me up!! 😳");
+    $creature.css("transform", "scale(1.2)");
+  });
 
-// MOUSEMOVE EVENT
-$(document).mousemove(function(event) {
-  $("#creature").css({
-    left: event.pageX - 60,
-    top: event.pageY - 60
+  // KEYPRESS EVENT
+  $(document).on("keydown", (event) => {
+    $status.text("You pressed: " + event.key);
+  });
+
+  // MOUSEMOVE EVENT — creature follows cursor
+  $(document).on("mousemove", (event) => {
+    $creature.css({
+      left: event.pageX - $creature.width() / 2,
+      top: event.pageY - $creature.height() / 2
+    });
+  });
+
+  // RENAME FEATURE — works with button or Enter key
+  function renameCreature() {
+    const name = $nameInput.val().trim();
+    if (name) {
+      $status.text(`You named your creature: ${name}`);
+      $creature.text(name); // shows name inside the box
+    } else {
+      $status.text("Please type a name!");
+      $creature.text(""); // clears previous name if input empty
+    }
+  }
+
+  // Click button
+  $renameBtn.on("click", renameCreature);
+
+  // Press Enter inside input box
+  $nameInput.on("keypress", (event) => {
+    if (event.key === "Enter") {
+      renameCreature();
+    }
   });
 });
